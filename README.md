@@ -1,24 +1,9 @@
-# README
+# The Odin Project External API App Build
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[project link](https://www.theodinproject.com/lessons/using-an-api)
 
-Things you may want to cover:
+This project builds a simple photostream viewer using the Flickr API.  
 
-* Ruby version
+Two options for storing API key/secret tokens presented were the `figaro` gem or creating your own environmental variable file.  This project went with the latter.  
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The interface is simple - enter a Flickr user ID and the app will pull and show public photos from their photostream.  
