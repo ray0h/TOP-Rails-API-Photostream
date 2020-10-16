@@ -1,0 +1,6 @@
+<h2>Flickr API Photstream</h2>
+<% form_with (url: root_path, method: 'GET') %>
+  <%= label_tag :user_id, Enter Flickr User ID: %><br/>
+  <%= text_field_tag :user_id %><br/>
+  <%= submit_tag %>
+<% end %> 
