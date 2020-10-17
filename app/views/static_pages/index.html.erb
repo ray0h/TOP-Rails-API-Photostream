@@ -1,6 +1,22 @@
-<h2>Flickr API Photstream</h2>
-<% form_with (url: root_path, method: 'GET') %>
-  <%= label_tag :user_id, Enter Flickr User ID: %><br/>
-  <%= text_field_tag :user_id %><br/>
-  <%= submit_tag %>
-<% end %> 
+<header>
+  <div class = 'form'>
+    <h2>Flickr API Photostream</h2>
+    <%= form_with url: root_path, method: 'get', local: true do %>
+      <%= label_tag :user_id, 'Enter Flickr User ID:' %><br/>
+      <%= text_field_tag :user_id, '', class: 'input-box' %><br/>
+      <%= submit_tag 'Find photos' %>
+    <% end %>
+  </div> 
+</header>
+<br/>
+
+<div class='container'>
+  Top of Content<br/>
+  <div class='thumbs'>
+    <% if @urls %>
+      <% @urls.each do |url| %>
+        <%= link_to image_tag(url[:thumb], class: 'image'), url[:link], class: 'col', target: :_blank %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

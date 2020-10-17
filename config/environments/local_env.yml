@@ -1,4 +1,0 @@
-# Use ENV['FLICKR_API_KEY'] anywhere in app to access the variables
-
-FLICKR_API_KEY: '44544a75baaf0b8f83f6995a8cfe0a2a'
-FLICKR_SECRET: 'd16679875f60b1cc'

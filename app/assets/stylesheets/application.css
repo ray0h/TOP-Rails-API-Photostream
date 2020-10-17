@@ -13,3 +13,45 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+}
+
+h2 {
+  margin: 5px 0
+}
+
+.form {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 20px;
+  background-color: cadetblue;
+}
+
+.container {
+  padding: 150px 20px;
+}
+
+.thumbs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.5em;
+}
+
+.col {
+  display: flex;
+  justify-content: center;
+}
+
+.input-box {
+  margin: 5px 0;
+}
