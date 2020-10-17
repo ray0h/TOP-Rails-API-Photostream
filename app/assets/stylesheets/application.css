@@ -27,18 +27,24 @@ header {
 }
 
 h2 {
-  margin: 5px 0
+  margin: 5px 0;
+}
+
+h3 {
+  margin: 5px 0;
+  padding: 0 20px;
 }
 
 .form {
   border: 1px solid black;
   padding: 10px;
-  margin: 20px;
+  margin: 20px 20px 5px 20px;
   background-color: cadetblue;
 }
 
 .container {
-  padding: 150px 20px;
+  margin: 200px 0 50px 0;
+  padding: 0 20px;
 }
 
 .thumbs {
@@ -50,6 +56,14 @@ h2 {
 .col {
   display: flex;
   justify-content: center;
+}
+
+.inputs {
+  display: flex;
+}
+
+.spacer {
+  margin: 10px 20px
 }
 
 .input-box {

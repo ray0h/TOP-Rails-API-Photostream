@@ -2,16 +2,30 @@
   <div class = 'form'>
     <h2>Flickr API Photostream</h2>
     <%= form_with url: root_path, method: 'get', local: true do %>
-      <%= label_tag :user_id, 'Enter Flickr User ID:' %><br/>
-      <%= text_field_tag :user_id, '', class: 'input-box' %><br/>
+      <div class='inputs'>
+        <div>
+          <%= label_tag 'user[user_id]', 'Enter Flickr User ID:' %><br/>
+          <%= text_field_tag 'user[user_id]', '', class: 'input-box' %><br/>
+        </div>
+        <div class='spacer'>Or</div>
+        <div>
+          <%= label_tag 'user[username]', 'Enter Flickr Username:' %><br/>
+          <%= text_field_tag 'user[username]', '', class: 'input-box' %><br/>
+        </div>
+      </div>
       <%= submit_tag 'Find photos' %>
     <% end %>
   </div> 
+
+  <% if @user %>
+    <h3><%= @user.username %> (<%= @user.id %>) Images</h3>
+  <% end %>
+  <h3><%= flash.notice %></h3>
+<hr>
 </header>
-<br/>
+
 
 <div class='container'>
-  Top of Content<br/>
   <div class='thumbs'>
     <% if @urls %>
       <% @urls.each do |url| %>
